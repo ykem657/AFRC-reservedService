@@ -1,0 +1,68 @@
+body {
+    color: $text-primary;
+    font-size: 16px;
+    font-family: $font-family;
+}
+
+img {
+    max-width: 100%;
+}
+
+.headerSection {
+    min-height: 200px;
+    background: url(../img/indexHeader_bg.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+
+    .AFRClogo {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 100px;
+        top: 0;
+        bottom: 0;
+
+        img{
+            margin-right: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+
+            .unit{
+                font-weight: bold;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.header_topmenu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.topmenu_list {
+    position: absolute;
+    top: -25px;
+}
+
+.firstFloor {
+    display: flex;
+    justify-content: space-around;
+    background-color: #82D2D2;
+    border-radius: 15px;
+
+    .firstFloor_item {
+        color: #fff;
+
+        a {
+            display: inline-block;
+            padding: 20px;
+            min-width: 150px;
+            text-align: center;
+        }
+    }
+}

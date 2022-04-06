@@ -1,0 +1,404 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: unset;
+}
+
+a:hover {
+  color: unset;
+  text-decoration: none;
+}
+
+.carousel_Onduty {
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.carousel_Onduty .carousel {
+  width: 60%;
+}
+
+.carousel_Onduty .carousel .carouselText {
+  font-size: 1.5rem;
+}
+
+.carousel_Onduty .onduty {
+  margin-left: 20px;
+}
+
+.carousel_Onduty .onduty .card {
+  border: 0;
+}
+
+.carousel_Onduty .onduty .card .cardTitle {
+  color: #4AAEAE;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.carousel_Onduty .onduty .card .cardContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.carousel_Onduty .onduty .card .cardContent .onduty_item {
+  padding: 20px;
+}
+
+.carousel_Onduty .onduty .card .cardContent .onduty_item span {
+  display: block;
+}
+
+.carousel_Onduty .onduty .card .cardContent .onduty_item hr {
+  color: #828282;
+}
+
+.carousel_Onduty .onduty .card .cardContent .onduty_item .day {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #828282;
+  margin-bottom: 8px;
+}
+
+.carousel_Onduty .onduty .card .cardContent .onduty_item .crewData .job {
+  display: inline-block;
+  border: 1px solid #4AAEAE;
+  border-radius: 5px;
+  color: #4AAEAE;
+  padding: 8px 4px;
+  margin-bottom: 8px;
+}
+
+.carousel_Onduty .onduty .card .cardContent .onduty_item .crewData .people {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.carousel_Onduty .onduty .card .cardContent .onduty_item .crewData .tel {
+  color: #828282;
+}
+
+.carousel_Onduty .onduty .card .cardContent .onduty_item .crewData.borderGray {
+  position: relative;
+}
+
+.carousel_Onduty .onduty .card .cardContent .onduty_item .crewData.borderGray::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: #828282;
+  left: -24px;
+  bottom: 0;
+}
+
+.news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.news .news_bg {
+  background: url(../img/indexHeader_bg.png) no-repeat center;
+  background-size: cover;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.news .news_bg .news_title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.news .news_bg .news_title .ver_en {
+  font-size: 3rem;
+  color: #4AAEAE;
+  margin-bottom: 20px;
+}
+
+.news .news_bg .news_title .ver_ch {
+  font-size: 2rem;
+}
+
+.news .news_list {
+  width: 80%;
+  padding: 20px;
+  background-color: #FBFBFB;
+}
+
+.news .news_list .listItem {
+  border-bottom: 1px solid #828282;
+  padding: 10px 0;
+}
+
+.news .news_list .listItem:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.news .news_list .listItem .listItem_title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.news .news_list .listItem .listItem_content {
+  font-size: 0.87rem;
+  line-height: 1.5;
+  color: #828282;
+}
+
+.linkWeb .linkWeb_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.linkWeb .linkWeb_content .linkWeb_title {
+  font-weight: bold;
+  text-align: center;
+  margin-right: 50px;
+}
+
+.linkWeb .linkWeb_content .linkWeb_title .ver_en {
+  font-size: 3rem;
+  color: #4AAEAE;
+  margin-bottom: 20px;
+}
+
+.linkWeb .linkWeb_content .linkWeb_title .ver_ch {
+  font-size: 2rem;
+}
+
+.linkWeb .linkWeb_content .linkWeb_list li {
+  margin-bottom: 15px;
+}
+
+.linkWeb .linkWeb_content .linkWeb_list li a:hover {
+  color: #4AAEAE;
+}
+
+body {
+  color: #1E3543;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Microsoft JhengHei UI", "Segoe UI", "Roboto", "Helvetica Neue", Charcoal, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+img {
+  max-width: 100%;
+}
+
+.headerSection {
+  min-height: 200px;
+  background: url(../img/indexHeader_bg.png) no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+
+.headerSection .AFRClogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 100px;
+  top: 0;
+  bottom: 0;
+}
+
+.headerSection .AFRClogo img {
+  margin-right: 20px;
+}
+
+.headerSection .AFRClogo h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.headerSection .AFRClogo h1 .unit {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.header_topmenu {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.topmenu_list {
+  position: absolute;
+  top: -25px;
+}
+
+.firstFloor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #82D2D2;
+  border-radius: 15px;
+}
+
+.firstFloor .firstFloor_item {
+  color: #fff;
+}
+
+.firstFloor .firstFloor_item a {
+  display: inline-block;
+  padding: 20px;
+  min-width: 150px;
+  text-align: center;
+}
+/*# sourceMappingURL=all.css.map */

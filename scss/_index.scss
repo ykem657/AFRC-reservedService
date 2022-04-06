@@ -1,0 +1,178 @@
+// ***index.scss***
+
+// 區塊_輪播、值日官
+.carousel_Onduty {
+    margin-top: 80px;
+    display: flex;
+
+    .carousel {
+        width: 60%;
+
+        .carouselText {
+            font-size: 1.5rem;
+        }
+    }
+
+    .onduty {
+        margin-left: 20px;
+
+        .card {
+            border: 0;
+
+            .cardTitle {
+                color: $primary-color;
+                font-weight: bold;
+                font-size: 2rem;
+            }
+
+            .cardContent {
+                display: flex;
+
+                .onduty_item {
+                    padding: 20px;
+
+                    span {
+                        display: block;
+                    }
+
+                    hr {
+                        color: $gray;
+                    }
+
+                    .day {
+                        font-size: 1.25rem;
+                        font-weight: bold;
+                        color: $gray;
+                        margin-bottom: 8px;
+                    }
+
+                    // 人員資料
+                    .crewData {
+                        .job {
+                            display: inline-block;
+                            border: 1px solid $primary-color;
+                            border-radius: 5px;
+                            color: $primary-color;
+                            padding: 8px 4px;
+                            margin-bottom: 8px;
+                        }
+
+                        .people {
+                            font-size: 2rem;
+                            font-weight: bold;
+                            margin-bottom: 8px;
+                        }
+
+                        .tel {
+                            color: $gray;
+                        }
+
+
+                        &.borderGray {
+                            position: relative;
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                display: block;
+                                width: 1px;
+                                height: 100%;
+                                background-color: $gray;
+                                left: -24px;
+                                bottom: 0;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+.news {
+    display: flex;
+
+    .news_bg {
+        background: url(../img/indexHeader_bg.png) no-repeat center;
+        background-size: cover;
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .news_title {
+            font-weight: bold;
+            text-align: center;
+
+            .ver_en {
+                font-size: 3rem;
+                color: $primary-color;
+                margin-bottom: 20px;
+            }
+
+            .ver_ch {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .news_list {
+        width: 80%;
+        padding: 20px;
+        background-color: #FBFBFB;
+
+        .listItem {
+            border-bottom: 1px solid $gray;
+            padding: 10px 0;
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            .listItem_title {
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            .listItem_content {
+                font-size: 0.87rem;
+                line-height: 1.5;
+                color: $gray;
+            }
+        }
+    }
+}
+
+.linkWeb {
+    .linkWeb_content {
+        display: flex;
+
+        .linkWeb_title {
+            font-weight: bold;
+            text-align: center;
+            margin-right: 50px;
+
+            .ver_en {
+                font-size: 3rem;
+                color: $primary-color;
+                margin-bottom: 20px;
+            }
+
+            .ver_ch {
+                font-size: 2rem;
+            }
+        }
+
+        .linkWeb_list{
+            li{
+                margin-bottom: 15px;
+                a{
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
