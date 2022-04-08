@@ -137,9 +137,11 @@ table {
 
 // ----
 a {
-    color: unset;
+    color: $text-primary;
+    transition: $transition;
+
     &:hover {
-        color: unset;
+        color: $primary-color;
         text-decoration: none;
     }
 }

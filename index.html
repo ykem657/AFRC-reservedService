@@ -5,10 +5,11 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/eea7328a7f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/all.css">
     <title>留守業務處</title>
 </head>
@@ -39,9 +40,8 @@
             </div>
         </div>
     </header>
-
     <!-- 輪播、值日官 -->
-    <div class="container contentSection carousel_Onduty mb-5">
+    <div class="container contentSection carousel_Onduty_visitor mb-5">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -78,9 +78,9 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-
-        <div class="onduty">
-            <div class="card">
+        <div class="onduty_visitor">
+            <!-- 值日官 -->
+            <div class="card onduty">
                 <div class="card-body">
                     <div class="cardTitle">
                         <h5>值日官</h5>
@@ -106,15 +106,23 @@
                 </div>
             </div>
             <hr>
-            <div class="card">
+            <!-- 瀏覽人數 -->
+            <div class="card visitor">
                 <div class="card-body">
                     <div class="cardTitle">本日瀏覽人數</div>
+                    <div class="visitorNumber_today">
+                        <div class="number_item"><span class="number">0</span></div>
+                        <div class="number_item"><span class="number">1</span></div>
+                        <div class="number_item"><span class="number">6</span></div>
+                        <div class="number_item"><span class="number">8</span></div>
+                    </div>
+                    <div class="visitorNumber_total">總瀏覽人數:<span>270000</span></div>
                 </div>
             </div>
         </div>
     </div>
-
-    <aside class="mb-5">
+    <!-- 最新消息 -->
+    <section class="mb-5">
         <div class="news">
             <div class="news_bg">
                 <div class="news_title">
@@ -124,74 +132,97 @@
             </div>
             <div class="news_list">
                 <div class="listItem">
-                    <div class="listItem_title">機步排專精訓練　強化兵科訓練成效</div>
+                    <div class="listItem_title"><a href="#">機步排專精訓練　強化兵科訓練成效</a></div>
                     <p class="listItem_content">
                         為落實各地區後備指揮部執行作戰區內「動員部隊督管」、「教召訓練整備」及「整合民、物力能量」等任務，後備指揮部指揮官姜中將於日前至中部地區後備指揮部視導，並針對作戰區全民防衛機制及111年執行14天教育召集訓練等重要工作實施指導...
                     </p>
                 </div>
                 <div class="listItem">
-                    <div class="listItem_title">機步排專精訓練　強化兵科訓練成效</div>
+                    <div class="listItem_title"><a href="#">機步排專精訓練　強化兵科訓練成效</a></div>
                     <p class="listItem_content">
                         為落實各地區後備指揮部執行作戰區內「動員部隊督管」、「教召訓練整備」及「整合民、物力能量」等任務，後備指揮部指揮官姜中將於日前至中部地區後備指揮部視導，並針對作戰區全民防衛機制及111年執行14天教育召集訓練等重要工作實施指導...
                     </p>
                 </div>
                 <div class="listItem">
-                    <div class="listItem_title">機步排專精訓練　強化兵科訓練成效</div>
+                    <div class="listItem_title"><a href="#">機步排專精訓練　強化兵科訓練成效</a></div>
                     <p class="listItem_content">
                         為落實各地區後備指揮部執行作戰區內「動員部隊督管」、「教召訓練整備」及「整合民、物力能量」等任務，後備指揮部指揮官姜中將於日前至中部地區後備指揮部視導，並針對作戰區全民防衛機制及111年執行14天教育召集訓練等重要工作實施指導...
                     </p>
                 </div>
                 <div class="listItem">
-                    <div class="listItem_title">機步排專精訓練　強化兵科訓練成效</div>
+                    <div class="listItem_title"><a href="#">機步排專精訓練　強化兵科訓練成效</a></div>
                     <p class="listItem_content">
                         為落實各地區後備指揮部執行作戰區內「動員部隊督管」、「教召訓練整備」及「整合民、物力能量」等任務，後備指揮部指揮官姜中將於日前至中部地區後備指揮部視導，並針對作戰區全民防衛機制及111年執行14天教育召集訓練等重要工作實施指導...
                     </p>
                 </div>
                 <div class="listItem">
-                    <div class="listItem_title">機步排專精訓練　強化兵科訓練成效</div>
+                    <div class="listItem_title"><a href="#">機步排專精訓練　強化兵科訓練成效</a></div>
                     <p class="listItem_content">
                         為落實各地區後備指揮部執行作戰區內「動員部隊督管」、「教召訓練整備」及「整合民、物力能量」等任務，後備指揮部指揮官姜中將於日前至中部地區後備指揮部視導，並針對作戰區全民防衛機制及111年執行14天教育召集訓練等重要工作實施指導...
                     </p>
                 </div>
+                <div class="more"><a href="#">查看更多<i class="fas fa-caret-right icon"></i></a></div>
             </div>
         </div>
-    </aside>
-
+    </section>
+    <!-- 常用連節、網網相連 -->
     <section>
         <div class="container linkWeb">
             <div class="row">
-                <div class="col-6">
+                <div class="col-md-6">
                     <div class="linkWeb_content">
                         <div class="linkWeb_title">
                             <h3 class="ver_en">Link</h3>
                             <h3 class="ver_ch">常用連結</h3>
                         </div>
+                        <div class="decorateLine">
+                            <img src="img/line.png" alt="">
+                        </div>
                         <div class="linkWeb_list">
                             <ul>
-                                <li><a href="#">官兵傷亡撫卹申請須知</a></li>
-                                <li><a href="#">卷證補發申辦查詢</a></li>
-                                <li><a href="#">二代健保申報作業</a></li>
-                                <li><a href="#">軍車保險投保作業</a></li>
-                                <li><a href="#">留守業務資訊系統</a></li>
-                                <li><a href="#">國軍葬厝管理系統</a></li>
-                                <li><a href="#">每日新聞摘要</a></li>
-                                <li><a href="#">每日通報系統</a></li>
+                                <li class="linkWeb_link"><i class="fas fa-caret-right icon"></i><a
+                                        href="#">官兵傷亡撫卹申請須知</a></li>
+                                <li class="linkWeb_link"><i class="fas fa-caret-right icon"></i><a href="#">卷證補發申辦查詢</a>
+                                </li>
+                                <li class="linkWeb_link"><i class="fas fa-caret-right icon"></i><a href="#">二代健保申報作業</a>
+                                </li>
+                                <li class="linkWeb_link"><i class="fas fa-caret-right icon"></i><a href="#">軍車保險投保作業</a>
+                                </li>
+                                <li class="linkWeb_link"><i class="fas fa-caret-right icon"></i><a href="#">留守業務資訊系統</a>
+                                </li>
+                                <li class="linkWeb_link"><i class="fas fa-caret-right icon"></i><a href="#">國軍葬厝管理系統</a>
+                                </li>
+                                <li class="linkWeb_link"><i class="fas fa-caret-right icon"></i><a href="#">每日新聞摘要</a>
+                                </li>
+                                <li class="linkWeb_link"><i class="fas fa-caret-right icon"></i><a href="#">每日通報系統</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <div class="linkWeb_content">
                         <div class="linkWeb_title">
                             <h3 class="ver_en">Web</h3>
                             <h3 class="ver_ch">網網相連</h3>
                         </div>
+                        <div class="decorateLine">
+                            <img src="img/line.png" alt="">
+                        </div>
                         <div class="linkWeb_list">
                             <ul>
-                                <li><a href="#">中華民國國防部</a></li>
-                                <li><a href="#">後備指揮部</a></li>
-                                <li><a href="#">國軍示範公墓</a></li>
-                                <li><a href="#">國軍革命忠烈祠</a></li>
+                                <li class="linkWeb_link"><i class="fas fa-caret-right icon"></i><a
+                                        href="https://www.mnd.gov.tw/" title="中華民國國防部-另開視窗" target="_blank">中華民國國防部</a>
+                                </li>
+                                <li class="linkWeb_link"><i class="fas fa-caret-right icon"></i><a
+                                        href="https://afrc.mnd.gov.tw/AFRCWeb/index.aspx" title="後備指揮部-另開視窗"
+                                        target="_blank">後備指揮部</a></li>
+                                <li class="linkWeb_link"><i class="fas fa-caret-right icon"></i><a
+                                        href="https://afrc.mnd.gov.tw/Cemetery/index.aspx" title="國軍示範公墓-另開視窗"
+                                        target="_blank">國軍示範公墓</a></li>
+                                <li class="linkWeb_link"><i class="fas fa-caret-right icon"></i><a
+                                        href="https://afrc.mnd.gov.tw/faith_martyr/  " title="國軍革命忠烈祠-另開視窗"
+                                        target="_blank">國軍革命忠烈祠</a></li>
                             </ul>
                         </div>
                     </div>
@@ -199,18 +230,42 @@
             </div>
         </div>
     </section>
+    <!-- footer -->
+    <footer>
+        <div class="footer"><span>國防部後備指揮部版權所有 Copyright©2021 Armed Force Reserve Command of MND. All right
+                reserved</span></div>
+    </footer>
+    <!-- totop -->
+    <button class="totopBtn" id="BackTop"><img src="img/icon_align-to-top.png" alt=""></button>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
         integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-
+    <!--go to top script-->
+    <script type="text/javascript">
+        $(function () {
+            var btn = $('.totopBtn');
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 300) {
+                    btn.addClass('show');
+                } else {
+                    btn.removeClass('show');
+                }
+            });
+            $('.totopBtn').on('click', function (e) {
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: 0 }, '100');
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -56,13 +56,21 @@ img {
     border-radius: 15px;
 
     .firstFloor_item {
-        color: #fff;
 
         a {
             display: inline-block;
+            color: #fff;
             padding: 20px;
             min-width: 150px;
             text-align: center;
         }
     }
+}
+
+.footer{
+    background-color: $gray;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    margin-top: 100px;
 }

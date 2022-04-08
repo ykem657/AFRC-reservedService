@@ -1,9 +1,9 @@
 // ***index.scss***
 
-// 區塊_輪播、值日官
-.carousel_Onduty {
-    margin-top: 80px;
+// 區塊_輪播、值日官、瀏覽人數
+.carousel_Onduty_visitor {
     display: flex;
+    margin-top: 80px;
 
     .carousel {
         width: 60%;
@@ -13,85 +13,170 @@
         }
     }
 
-    .onduty {
-        margin-left: 20px;
+    .onduty_visitor {
+        margin-left: 50px;
 
         .card {
             border: 0;
 
-            .cardTitle {
-                color: $primary-color;
-                font-weight: bold;
-                font-size: 2rem;
+            .card-body {
+                padding: 0;
+
+                .cardTitle {
+                    color: $primary-color;
+                    font-weight: bold;
+                    font-size: 2rem;
+                }
+
+                .cardContent {
+                    display: flex;
+                }
             }
+        }
 
-            .cardContent {
-                display: flex;
+        // 值日官
+        .onduty {
+            .onduty_item {
+                padding: 10px 30px 0 30px;
 
-                .onduty_item {
-                    padding: 20px;
+                &:first-child {
+                    padding-left: 0;
+                }
 
-                    span {
-                        display: block;
-                    }
+                span {
+                    display: block;
+                }
 
-                    hr {
-                        color: $gray;
-                    }
+                .day {
+                    font-size: 1.25rem;
+                    font-weight: bold;
+                    color: $gray;
+                    margin-bottom: 8px;
+                }
 
-                    .day {
-                        font-size: 1.25rem;
-                        font-weight: bold;
-                        color: $gray;
+                // 人員資料
+                .crewData {
+                    .job {
+                        display: inline-block;
+                        border: 1px solid $primary-color;
+                        border-radius: 5px;
+                        color: $primary-color;
+                        padding: 8px 4px;
                         margin-bottom: 8px;
                     }
 
-                    // 人員資料
-                    .crewData {
-                        .job {
-                            display: inline-block;
-                            border: 1px solid $primary-color;
-                            border-radius: 5px;
-                            color: $primary-color;
-                            padding: 8px 4px;
-                            margin-bottom: 8px;
+                    .people {
+                        font-size: 2rem;
+                        font-weight: bold;
+                        margin-bottom: 8px;
+                    }
+
+                    .tel {
+                        color: $gray;
+                    }
+
+
+                    &.borderGray {
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            display: block;
+                            width: 1px;
+                            height: 100%;
+                            background-color: $gray;
+                            left: -24px;
+                            bottom: 0;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        hr {
+            color: $gray;
+            margin-top: 2rem!important;
+            margin-bottom: 2rem;
+        }
+
+        // 瀏覽人數
+        .visitor {
+
+            // 今日瀏覽人數
+            .visitorNumber_today {
+                display: flex;
+                margin-top: 20px;
+
+                .number_item {
+                    display: block;
+                    background: linear-gradient(3.14deg, #535353 0.19%, #3D3D3D 94.3%);
+                    border: 1px solid #000;
+                    border-radius: 15px;
+                    color: #fff;
+                    font-size: 4rem;
+                    font-weight: bold;
+                    padding: 15px;
+                    margin-right: 5px;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        width: 100%;
+                        height: 1.5px;
+                        background-color: #000;
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        right: 0;
+                        z-index: 2;
+                    }
+
+                    .number {
+
+                        &::after {
+                            content: '';
+                            width: 1px;
+                            height: 10px;
+                            background-color: #F7EB5A;
+                            position: absolute;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            left: 0px;
+                            z-index: 3;
                         }
 
-                        .people {
-                            font-size: 2rem;
-                            font-weight: bold;
-                            margin-bottom: 8px;
+                        &::before {
+                            content: '';
+                            width: 1px;
+                            height: 10px;
+                            background-color: #F7EB5A;
+                            position: absolute;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            right: -1px;
+                            z-index: 3;
                         }
-
-                        .tel {
-                            color: $gray;
-                        }
-
-
-                        &.borderGray {
-                            position: relative;
-
-                            &::after {
-                                content: "";
-                                position: absolute;
-                                display: block;
-                                width: 1px;
-                                height: 100%;
-                                background-color: $gray;
-                                left: -24px;
-                                bottom: 0;
-                            }
-                        }
-
                     }
                 }
+            }
+
+            // 總瀏覽人數
+            .visitorNumber_total {
+                margin-top: 15px;
+                font-size: 1.25rem;
+                font-weight: bold;
+                color: $gray;
             }
         }
     }
 }
 
+// 最新消息
 .news {
     display: flex;
+    background-color: #FBFBFB;
 
     .news_bg {
         background: url(../img/indexHeader_bg.png) no-repeat center;
@@ -119,8 +204,7 @@
 
     .news_list {
         width: 80%;
-        padding: 20px;
-        background-color: #FBFBFB;
+        padding: 30px;
 
         .listItem {
             border-bottom: 1px solid $gray;
@@ -141,9 +225,19 @@
                 color: $gray;
             }
         }
+
+        .more {
+            font-size: 0.87rem;
+            text-align: right;
+
+            .icon {
+                margin-left: 10px;
+            }
+        }
     }
 }
 
+// 常用連結、網網相連
 .linkWeb {
     .linkWeb_content {
         display: flex;
@@ -151,12 +245,11 @@
         .linkWeb_title {
             font-weight: bold;
             text-align: center;
-            margin-right: 50px;
 
             .ver_en {
                 font-size: 3rem;
                 color: $primary-color;
-                margin-bottom: 20px;
+                margin-bottom: 30px;
             }
 
             .ver_ch {
@@ -164,15 +257,51 @@
             }
         }
 
-        .linkWeb_list{
-            li{
+        .decorateLine {
+            margin: 0 50px;
+        }
+
+        .linkWeb_list {
+            .linkWeb_link {
                 margin-bottom: 15px;
-                a{
-                    &:hover{
-                        color: $primary-color;
-                    }
+                transition: $transition;
+
+                &:hover {
+                    color: $primary-color;
+                }
+
+                .icon {
+                    margin-right: 10px;
                 }
             }
         }
     }
+}
+
+// totop
+.totopBtn {
+    position: fixed;
+    right: 25px;
+    bottom: -50px;
+    z-index: 9999999;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    box-shadow: 0px 24px 20px 3px rgba(225, 225, 225, 0.1), 0px 9px 46px 8px rgba(225, 225, 225, 0.12), 0px 11px 15px -7px #E1E1E1;
+    background-color: #fff;
+    transition: $transition;
+    opacity: 0;
+    cursor: pointer;
+
+    &.show {
+        bottom: 25px;
+        opacity: 1;
+    }
+
+    &:hover{
+        border: 2px solid $primary-color;
+    }
+
 }
