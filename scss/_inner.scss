@@ -1,0 +1,79 @@
+.sidebar {
+    background-color: #fff;
+    box-shadow: $box-shadow;
+    padding: 10px 0;
+
+    .sidebar_title {
+        padding: 20px;
+        position: relative;
+
+        h3 {
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        &::before {
+            content: '';
+            height: 30px;
+            width: 5px;
+            background: #57A6CA;
+            position: absolute;
+            top: 25%;
+            left: 0;
+        }
+    }
+
+    .sidebar_list {
+        .firstfloor_item {
+            .firstfloor_link {
+                display: block;
+                padding: 15px 20px;
+
+                &:hover {
+                    background-color: $gray_hover;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+// 麵包屑
+.breadcrumb {
+    background-color: #fff;
+    padding: 0;
+
+    .breadcrumb-item {
+        font-size: 0.87rem;
+
+        .breadcrumb-link {
+            color: $primary-color;
+
+        }
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before {
+        content: '>';
+    }
+}
+
+// 相簿
+.album {
+    .album_item {
+        box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1);
+        height: 100%;
+    }
+
+    .album_body {
+        padding: 15px;
+        line-height: 1.5;
+
+        .album_date {
+            color: $gray;
+        }
+
+        .album_title {
+            font-weight: bold;
+        }
+    }
+}

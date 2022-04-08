@@ -148,15 +148,22 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 80px;
 }
 
 .carousel_Onduty_visitor .carousel {
   width: 60%;
 }
 
+.carousel_Onduty_visitor .carousel .carousel-caption {
+  right: 20px;
+  left: 20px;
+  bottom: 0;
+  text-align: left;
+}
+
 .carousel_Onduty_visitor .carousel .carouselText {
   font-size: 1.5rem;
+  line-height: 1.5;
 }
 
 .carousel_Onduty_visitor .onduty_visitor {
@@ -404,6 +411,7 @@ a:hover {
 }
 
 .linkWeb .linkWeb_content .linkWeb_list .linkWeb_link {
+  font-size: 1.25rem;
   margin-bottom: 15px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -445,7 +453,92 @@ a:hover {
   border: 2px solid #4AAEAE;
 }
 
+.sidebar {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 8px 12px #E1E1E1;
+          box-shadow: 0px 8px 12px #E1E1E1;
+  padding: 10px 0;
+}
+
+.sidebar .sidebar_title {
+  padding: 20px;
+  position: relative;
+}
+
+.sidebar .sidebar_title h3 {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.sidebar .sidebar_title::before {
+  content: '';
+  height: 30px;
+  width: 5px;
+  background: #57A6CA;
+  position: absolute;
+  top: 25%;
+  left: 0;
+}
+
+.sidebar .sidebar_list .firstfloor_item .firstfloor_link {
+  display: block;
+  padding: 15px 20px;
+}
+
+.sidebar .sidebar_list .firstfloor_item .firstfloor_link:hover {
+  background-color: #F9F9F9;
+  font-weight: bold;
+}
+
+.breadcrumb {
+  background-color: #fff;
+  padding: 0;
+}
+
+.breadcrumb .breadcrumb-item {
+  font-size: 0.87rem;
+}
+
+.breadcrumb .breadcrumb-item .breadcrumb-link {
+  color: #4AAEAE;
+}
+
+.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  content: '>';
+}
+
+.album .album_item {
+  -webkit-box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.album .album_body {
+  padding: 15px;
+  line-height: 1.5;
+}
+
+.album .album_body .album_date {
+  color: #828282;
+}
+
+.album .album_body .album_title {
+  font-weight: bold;
+}
+
+html,
 body {
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: #1E3543;
   font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Microsoft JhengHei UI", "Segoe UI", "Roboto", "Helvetica Neue", Charcoal, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -453,6 +546,10 @@ body {
 
 img {
   max-width: 100%;
+}
+
+header {
+  margin-bottom: 80px;
 }
 
 .headerSection {
@@ -523,9 +620,11 @@ img {
 }
 
 .footer {
+  width: 100%;
   background-color: #828282;
   color: #fff;
   text-align: center;
+  font-size: 0.87rem;
   padding: 30px;
   margin-top: 100px;
 }

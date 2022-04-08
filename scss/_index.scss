@@ -3,13 +3,20 @@
 // 區塊_輪播、值日官、瀏覽人數
 .carousel_Onduty_visitor {
     display: flex;
-    margin-top: 80px;
 
     .carousel {
         width: 60%;
 
+        .carousel-caption{
+            right: 20px;
+            left: 20px;
+            bottom: 0;
+            text-align: left;
+        }
+
         .carouselText {
             font-size: 1.5rem;
+            line-height: 1.5;
         }
     }
 
@@ -97,7 +104,7 @@
 
         hr {
             color: $gray;
-            margin-top: 2rem!important;
+            margin-top: 2rem !important;
             margin-bottom: 2rem;
         }
 
@@ -263,6 +270,7 @@
 
         .linkWeb_list {
             .linkWeb_link {
+                font-size: 1.25rem;
                 margin-bottom: 15px;
                 transition: $transition;
 
@@ -300,7 +308,7 @@
         opacity: 1;
     }
 
-    &:hover{
+    &:hover {
         border: 2px solid $primary-color;
     }
 

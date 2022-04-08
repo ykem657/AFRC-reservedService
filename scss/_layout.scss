@@ -1,4 +1,11 @@
+html,
 body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
     color: $text-primary;
     font-size: 16px;
     font-family: $font-family;
@@ -6,6 +13,10 @@ body {
 
 img {
     max-width: 100%;
+}
+
+header {
+    margin-bottom: 80px;
 }
 
 .headerSection {
@@ -22,7 +33,7 @@ img {
         top: 0;
         bottom: 0;
 
-        img{
+        img {
             margin-right: 20px;
         }
 
@@ -30,7 +41,7 @@ img {
             font-size: 2rem;
             margin-bottom: 10px;
 
-            .unit{
+            .unit {
                 font-weight: bold;
                 margin-left: 10px;
             }
@@ -67,10 +78,12 @@ img {
     }
 }
 
-.footer{
+.footer {
+    width: 100%;
     background-color: $gray;
     color: #fff;
     text-align: center;
+    font-size: 0.87rem;
     padding: 30px;
     margin-top: 100px;
 }
