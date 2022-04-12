@@ -59,21 +59,139 @@
 
 // 相簿
 .album {
+    .row {
+        flex-wrap: wrap;
+    }
+
     .album_item {
         box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
         height: 100%;
-    }
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
 
-    .album_body {
-        padding: 15px;
-        line-height: 1.5;
+        // 封面照片
+        .album_cover {
+            min-height: 150px;
+            position: relative;
+            transition: $transition;
 
-        .album_date {
-            color: $gray;
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            .album_total {
+                background-color: $primary-color;
+                border-radius: 0 4px 0 0;
+                font-weight: bold;
+                color: #fff;
+                padding: 15px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
         }
 
-        .album_title {
-            font-weight: bold;
+        .album_body {
+            padding: 15px;
+            line-height: 1.5;
+
+            .album_date {
+                color: $gray;
+                margin-bottom: 5px;
+            }
+
+            .album_title {
+                font-weight: bold;
+            }
+
+            .album_icon {
+                display: block;
+                text-align: right;
+
+                .icon {
+                    font-size: 1.25rem;
+                }
+            }
         }
     }
+}
+
+// 分業
+.pagination {
+    justify-content: center;
+
+    .page-item {
+        &.active {
+            .page-link {
+                background-color: #fff;
+                color: $primary-color;
+                border: 1px solid $primary-color;
+            }
+        }
+    }
+
+    .page-link {
+        border: 1px solid #d9d9d9;
+        border-radius: 5px;
+        margin-right: 10px;
+        color: $text-primary;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+.slick-slide {
+    .photo {
+        height: 150px;
+        margin: 5px;
+        cursor: pointer;
+    }
+}
+
+.slider-for {
+    img {
+        width: 100%;
+    }
+}
+
+.slider-nav {
+    img {
+        max-height: 100px;
+    }
+}
+
+.slick-prev,
+.slick-next {
+    width: 36px;
+    height: 36px;
+
+    &::before {
+        color: #1A1C2726;
+        font-size: 36px;
+
+
+    }
+
+
+}
+
+.slick-prev {
+    left: -50px;
+}
+
+.slick-next {
+    right: -50px;
+}
+
+.slider-img {
+    min-height: 500px;
+}
+
+.nav-img {
+    min-height: 150px;
+    background-size: cover;
 }

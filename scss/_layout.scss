@@ -1,9 +1,9 @@
-html,
-body {
+html{
     height: 100%;
 }
 
 body {
+    height: 100%;
     display: flex;
     flex-direction: column;
     color: $text-primary;
@@ -17,6 +17,10 @@ img {
 
 header {
     margin-bottom: 80px;
+}
+
+section{
+    flex: 1;
 }
 
 .headerSection {
