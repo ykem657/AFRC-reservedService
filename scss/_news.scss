@@ -1,0 +1,81 @@
+// ***news.scss
+
+// 最新消息_更多
+.news_more {
+    .news_list {
+
+        .listItem {
+            border-bottom: 1px solid $gray;
+            padding: 10px 0;
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            .listItem_date {
+                display: block;
+                color: $gray;
+                margin-bottom: 10px;
+            }
+
+            .listItem_title {
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            .listItem_content {
+                font-size: 0.87rem;
+                line-height: 1.5;
+                color: $gray;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+}
+
+// 最新消息_內頁
+.news_inner {
+    display: flex;
+
+    .news_data {
+        .news_date {
+            color: $gray;
+            margin-bottom: 8px;
+        }
+
+        .news_mark {
+            display: inline-block;
+            background-color: $primary_color;
+            padding: 12px;
+            border-radius: 0 0 10px 0;
+            color: #fff;
+            font-size: 0.87rem;
+        }
+    }
+
+    .news_article {
+        .article_title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .article_content {
+            line-height: 1.5;
+        }
+
+        .article_order {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+
+            .icon {
+                margin: 0 5px;
+            }
+        }
+    }
+}

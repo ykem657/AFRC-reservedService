@@ -1,0 +1,44 @@
+// ***plugin.scss
+
+// slick.js
+.slider-for {
+    img {
+        width: 100%;
+    }
+
+    .slider-img {
+        min-height: 500px;
+    }
+}
+
+.slider-nav {
+    .nav-img {
+        min-height: 150px;
+        background-size: cover;
+
+        .photo {
+            height: 150px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    }
+
+    .slick-prev,
+    .slick-next {
+        width: 36px;
+        height: 36px;
+
+        &::before {
+            color: #1A1C2726;
+            font-size: 36px;
+        }
+    }
+
+    .slick-prev {
+        left: -50px;
+    }
+
+    .slick-next {
+        right: -50px;
+    }
+}
