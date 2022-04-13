@@ -1,147 +1,268 @@
-.sidebar {
-    background-color: #fff;
-    box-shadow: $box-shadow;
-    padding: 10px 0;
+ // 麵包屑
+ .breadcrumb {
+     background-color: #fff;
+     padding: 0;
 
-    .sidebar_title {
-        padding: 20px;
-        position: relative;
+     .breadcrumb-item {
+         font-size: 0.87rem;
 
-        h3 {
-            font-weight: bold;
-            font-size: 1.25rem;
-        }
+         .breadcrumb-link {
+             color: $primary-color;
 
-        &::before {
-            content: '';
-            height: 30px;
-            width: 5px;
-            background: #57A6CA;
-            position: absolute;
-            top: 25%;
-            left: 0;
-        }
-    }
+         }
+     }
 
-    .sidebar_list {
-        .firstfloor_item {
-            .firstfloor_link {
-                display: block;
-                padding: 15px 20px;
+     .breadcrumb-item+.breadcrumb-item::before {
+         content: '>';
+     }
+ }
 
-                &:hover {
-                    background-color: $gray_hover;
-                    font-weight: bold;
-                }
-            }
-        }
-    }
-}
+ // 相簿
+ .album {
+     .row {
+         flex-wrap: wrap;
+     }
 
-// 麵包屑
-.breadcrumb {
-    background-color: #fff;
-    padding: 0;
+     .album_item {
+         box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1);
+         margin-bottom: 20px;
+         height: 100%;
+         display: flex;
+         flex-direction: column;
+         overflow: hidden;
 
-    .breadcrumb-item {
-        font-size: 0.87rem;
+         // 封面照片
+         .album_cover {
+             min-height: 150px;
+             position: relative;
+             transition: $transition;
 
-        .breadcrumb-link {
-            color: $primary-color;
+             &:hover {
+                 transform: scale(1.05);
+             }
 
-        }
-    }
+             .album_total {
+                 background-color: $primary-color;
+                 border-radius: 0 4px 0 0;
+                 font-weight: bold;
+                 color: #fff;
+                 padding: 15px;
+                 position: absolute;
+                 bottom: 0;
+                 left: 0;
+             }
+         }
 
-    .breadcrumb-item+.breadcrumb-item::before {
-        content: '>';
-    }
-}
+         .album_body {
+             padding: 15px;
+             line-height: 1.5;
 
-// 相簿
-.album {
-    .row {
-        flex-wrap: wrap;
-    }
+             .album_date {
+                 color: $gray;
+                 margin-bottom: 5px;
+             }
 
-    .album_item {
-        box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
+             .album_title {
+                 font-weight: bold;
+             }
 
-        // 封面照片
-        .album_cover {
-            min-height: 150px;
-            position: relative;
-            transition: $transition;
+             .album_icon {
+                 display: block;
+                 text-align: right;
 
-            &:hover {
-                transform: scale(1.05);
-            }
+                 .icon {
+                     font-size: 1.25rem;
+                 }
+             }
+         }
+     }
+ }
 
-            .album_total {
-                background-color: $primary-color;
-                border-radius: 0 4px 0 0;
-                font-weight: bold;
-                color: #fff;
-                padding: 15px;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-            }
-        }
+ // 分業
+ .pagination {
+     justify-content: center;
+     margin-top: 20px;
 
-        .album_body {
-            padding: 15px;
-            line-height: 1.5;
+     .page-item {
+         &.active {
+             .page-link {
+                 background-color: #fff;
+                 color: $primary-color;
+                 border: 1px solid $primary-color;
+             }
+         }
+     }
 
-            .album_date {
-                color: $gray;
-                margin-bottom: 5px;
-            }
+     .page-link {
+         border: 1px solid #d9d9d9;
+         border-radius: 5px;
+         margin-right: 10px;
+         color: $text-primary;
 
-            .album_title {
-                font-weight: bold;
-            }
+         &:focus {
+             box-shadow: none;
+         }
+     }
+ }
 
-            .album_icon {
-                display: block;
-                text-align: right;
 
-                .icon {
-                    font-size: 1.25rem;
-                }
-            }
-        }
-    }
-}
+ // *******************************
 
-// 分業
-.pagination {
-    justify-content: center;
-    margin-top: 20px;
 
-    .page-item {
-        &.active {
-            .page-link {
-                background-color: #fff;
-                color: $primary-color;
-                border: 1px solid $primary-color;
-            }
-        }
-    }
 
-    .page-link {
-        border: 1px solid #d9d9d9;
-        border-radius: 5px;
-        margin-right: 10px;
-        color: $text-primary;
+ .content_inner {
+     .left {
+         .sidebar {
+             background-color: #fff;
+             box-shadow: $box-shadow;
+             padding: 10px 0;
 
-        &:focus {
-            box-shadow: none;
-        }
-    }
-}
+             .sidebar_title {
+                 padding: 20px;
+                 position: relative;
 
+                 h3 {
+                     font-weight: bold;
+                     font-size: 1.25rem;
+                 }
+
+                 &::before {
+                     content: '';
+                     height: 30px;
+                     width: 5px;
+                     background: #57A6CA;
+                     position: absolute;
+                     top: 25%;
+                     left: 0;
+                 }
+             }
+
+             .firstfloor {
+                 .firstfloor_item {
+
+                     .firstfloor_link {
+                         display: block;
+                         padding: 15px 20px;
+
+                         &:hover {
+                             background-color: $gray_hover;
+                         }
+                     }
+
+                     .firstfloor_link {
+                         position: relative;
+
+                         .icon {
+                             position: absolute;
+                             right: 15px;
+                             transition: $transition;
+                         }
+
+                         &.active {
+                             .icon {
+                                 transform: rotate(180deg);
+                             }
+                         }
+                     }
+                 }
+             }
+
+             .secondfloor {
+                 display: none;
+
+                 .secondfloor_link {
+                     display: block;
+                     padding: 15px 20px;
+                     text-indent: 2rem;
+                     border-right: 3px solid transparent;
+
+                     &:hover{
+                         background-color: #DFF2F2;
+                         border-right: 3px solid $primary-color;
+                     }
+                 }
+             }
+         }
+
+         .article_data {
+             .data_date {
+                 color: $gray;
+                 margin-bottom: 8px;
+             }
+
+             .data_mark {
+                 display: inline-block;
+                 background-color: $primary_color;
+                 padding: 12px;
+                 border-radius: 0 0 10px 0;
+                 color: #fff;
+                 font-size: 0.87rem;
+             }
+         }
+     }
+
+     .right {
+
+         // 文章
+         .article {
+             .article_title {
+                 display: flex;
+                 justify-content: space-between;
+                 align-items: center;
+                 margin-bottom: 15px;
+
+                 h3 {
+                     font-size: 1.25rem;
+                     font-weight: bold;
+                 }
+             }
+
+             .article_content {
+
+                 p {
+                     line-height: 1.5;
+                 }
+
+
+                 .article_text {
+                     p {
+                         margin-bottom: 1rem;
+                     }
+                 }
+
+                 .article_img {
+                     .img_item {
+                         height: 200px;
+
+                         &:not(:last-child) {
+                             margin-bottom: 1rem;
+                         }
+                     }
+                 }
+
+                 .article_attached {
+                     background-color: #F9F9F9;
+                     padding: 15px;
+                     margin-top: 20px;
+                 }
+             }
+
+             .article_order {
+                 display: flex;
+                 justify-content: space-between;
+                 margin-top: 20px;
+                 position: relative;
+
+                 .order_item {
+                     display: flex;
+                     align-items: center;
+
+                     .icon {
+                         margin: 0 5px;
+                         font-size: 1.25rem;
+                     }
+                 }
+             }
+         }
+     }
+ }

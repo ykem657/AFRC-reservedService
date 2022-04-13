@@ -1,0 +1,19 @@
+// 
+.btn_style {
+    border: 0;
+    background-color: #fff;
+    cursor: pointer;
+    transition: $transition;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+.btn_print {
+    font-size: 1.25rem;
+
+    &:hover {
+        color: $primary-color;
+    }
+}
