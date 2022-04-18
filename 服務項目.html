@@ -40,7 +40,6 @@
             </div>
         </div>
     </header>
-
     <section>
         <div class="container">
             <div class="content_inner">
@@ -71,7 +70,8 @@
                                 <li class="firstfloor_item">
                                     <a class="firstfloor_link" href="#">軍眷服務<i class="fas fa-angle-down icon"></i></a>
                                     <ul class="secondfloor">
-                                        <li class="secondfloor_item"><a class="secondfloor_link" href="#">軍眷身分證申辦</a></li>
+                                        <li class="secondfloor_item"><a class="secondfloor_link" href="#">軍眷身分證申辦</a>
+                                        </li>
                                         <li class="secondfloor_item"><a class="secondfloor_link" href="#">軍眷福利</a></li>
                                         <li class="secondfloor_item"><a class="secondfloor_link" href="#">遺族照護</a></li>
                                     </ul>
@@ -117,10 +117,6 @@
             </div>
         </div>
     </section>
-
-
-
-
     <!-- footer -->
     <footer>
         <div class="footer">
@@ -139,16 +135,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-    <script>
-        $(function () {
-            $('.firstfloor_link').on('click', function () {
-                $(this).toggleClass('active');
-                $(this).siblings('.secondfloor').stop().slideToggle();
-                $(this).parents().siblings().find('.secondfloor').stop().slideUp();
-                $(this).siblings().removeClass('active');
-            });
-        });
-    </script>
+    <script src="js/all.js"></script>
 </body>
 
 </html>

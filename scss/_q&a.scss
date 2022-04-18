@@ -1,0 +1,95 @@
+.qa_categoryitem {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .categoryitem_link {
+        display: block;
+        width: 100%;
+        padding: 50px;
+        color: #fff;
+        border-radius: 8px;
+
+        img {
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        &.insurance {
+            background-color: #4AAEAE;
+        }
+
+        &.tombstone {
+            background-color: #FFC859;
+        }
+
+        &.militaryfamily {
+            background-color: #FFB76F;
+        }
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
+
+.qa_item {
+    border: 1px solid #dde1e3;
+    border-radius: 4px;
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        font-weight: bold;
+
+        .icon {
+            transition: $transition;
+            transform: rotate(0deg);
+        }
+
+        &.active {
+            .icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .answer {
+        display: none;
+        padding: 0 30px 15px 30px;
+
+        p{
+            color: $gray;
+            font-size: 0.87rem;
+        }
+
+        .print_icon {
+            text-align: right;
+            margin-top: 20px;
+
+            .btn_print {
+                font-size: 0.87rem;
+
+                .icon {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}

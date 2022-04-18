@@ -12,6 +12,19 @@
 
 .btn_print {
     font-size: 1.25rem;
+    color: $text-primary;
+
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+.btn_download {
+    font-size: 0.87rem;
+
+    .icon {
+        margin-right: 5px;
+    }
 
     &:hover {
         color: $primary-color;
