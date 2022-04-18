@@ -552,8 +552,6 @@ a:hover {
   background-color: #fff;
   color: #4AAEAE;
   border: 1px solid #4AAEAE;
-  width: 36px;
-  height: 36px;
 }
 
 .pagination .page-link {
@@ -561,6 +559,8 @@ a:hover {
   border-radius: 5px;
   margin-right: 10px;
   color: #1E3543;
+  width: 36px;
+  height: 36px;
 }
 
 .pagination .page-link:focus {
@@ -630,6 +630,7 @@ a:hover {
 .content_inner .left .sidebar .secondfloor .secondfloor_link {
   display: block;
   padding: 15px 20px;
+  font-size: 0.87rem;
   text-indent: 2rem;
   border-right: 3px solid transparent;
 }
@@ -901,6 +902,14 @@ a:hover {
   color: #4AAEAE;
 }
 
+.btn_search {
+  background-color: #4AAEAE;
+  border-radius: 0 4px 4px 0;
+  color: #fff;
+  padding: 10px;
+  min-width: 45px;
+}
+
 .qa_categoryitem {
   text-align: center;
   display: -webkit-box;
@@ -951,6 +960,24 @@ a:hover {
 
 .qa_categoryitem .categoryitem_link:hover {
   opacity: .8;
+}
+
+.qa_search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.qa_search .input_search {
+  border: 1px solid #E4E4E4;
+  border-radius: 4px 0 0 4px;
+  padding: 10px;
+  min-width: 400px;
+}
+
+.qa_search .input_search:focus-visible {
+  outline: 0;
 }
 
 .qa_item {
@@ -1073,6 +1100,10 @@ body {
 
 img {
   max-width: 100%;
+}
+
+input {
+  color: #1E3543;
 }
 
 header {
