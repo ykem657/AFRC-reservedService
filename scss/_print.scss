@@ -1,0 +1,69 @@
+// ***print.scss
+body {
+    -webkit-print-color-adjust: exact;
+    /*如果背景圖沒顯示請加必殺技 !important*/
+}
+
+@media print {
+
+    header,
+    .left,
+    nav,
+    .article_order,
+    footer {
+        display: none !important;
+    }
+
+    .article_text {
+        width: 70%;
+    }
+
+    .article_img {
+        width: 30%;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        page-break-after: avoid;
+        page-break-inside: avoid
+    }
+
+    h1+p,
+    h2+p,
+    h3+p {
+        page-break-before: avoid;
+    }
+
+    a {
+        page-break-inside: avoid
+    }
+
+    img {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+
+    table,
+    blockquote {
+        page-break-inside: avoid;
+    }
+
+    ul,
+    ol,
+    dl {
+        page-break-before: avoid;
+    }
+
+    /* 如架構本身用一組一組的 DIV 包住，也可強制設定每組 DIV 會各自切成一頁 */
+    div.pageBlock {
+        page-break-before: always;
+    }
+}
